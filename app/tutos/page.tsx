@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import BottomNav from "@/components/BottomNav";
 import VideoCard from "@/components/VideoCard";
 import Tabs from "@/components/Tabs";
+import { videos } from "@/mocks/videos";
 
 export default function Tutos() {
   return (
@@ -13,10 +14,9 @@ export default function Tutos() {
         <Tabs options={["Tous", "Faciles", "Tendances", "Du moment"]} />
 
         <section className="grid grid-cols-2 gap-4">
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
+           {videos.map((video) => (
+              <VideoCard key={video.id} {...video} />
+            ))}
         </section>
       </main>
 
