@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import BottomNav from "@/components/BottomNav";
 import VideoCard from "@/components/VideoCard";
-import ImageCard from "@/components/ImageCard";
 import BeforeAfterCard from "@/components/BeforeAfterCard";
+import { videos } from "@/mocks/videos";
+import { tendances } from "@/mocks/tendances";
 
 export default function Accueil() {
   return (
@@ -13,19 +14,21 @@ export default function Accueil() {
         <section>
           <h2 className="text-xl font-bold mb-2">Tutos du moment</h2>
           <div className="flex space-x-4 overflow-x-auto">
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
+            {videos.map((video) => (
+              <VideoCard key={video.id} {...video} />
+            ))}
           </div>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold mb-2">Créations tendances</h2>
-          <div className="grid grid-cols-2 gap-4">
-            <ImageCard />
-            <ImageCard />
+          <h2 className="text-xl font-bold mb-2">Réparations / Créations tendances</h2>
+          <div className="flex space-x-4 overflow-x-auto">
+            {tendances.map((video) => (
+              <VideoCard key={video.id} {...video} />
+            ))}
           </div>
         </section>
+
 
         <section>
           <h2 className="text-xl font-bold mb-2">Avant / Après - Émouvants</h2>
