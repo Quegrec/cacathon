@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "title": "Post 1",
+      "image": "/images/post1.jpg",
+      "description": "Description du post 1"
+    },
+    {
+      "id": 2,
+      "title": "Post 2",
+      "image": "/images/post2.jpg",
+      "description": "Description du post 2"
+    }
+  ]
+  
