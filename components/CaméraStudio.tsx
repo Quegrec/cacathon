@@ -34,8 +34,12 @@ export default function CameraStudio() {
         };
 
         mediaRecorder.current = recorder;
-      } catch (err: any) {
-        setError("Erreur d’accès à la caméra : " + err.message);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError("Erreur d’accès à la caméra : " + err.message);
+        } else {
+          setError("Erreur d’accès à la caméra : Une erreur inconnue s'est produite.");
+        }
       }
     }
 
