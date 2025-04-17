@@ -1,6 +1,7 @@
 'use client'
 import BottomNav from "@/components/BottomNav";
 import Tabs from "@/components/Tabs";
+import CameraStudio from "@/components/CaméraStudio";
 
 export default function Partage() {
   return (
@@ -9,7 +10,10 @@ export default function Partage() {
 
       <main className="flex-1 p-4 space-y-4">
         <Tabs options={["Tutos", "Photo", "Avant/Après Vidéo"]} />
-        <div className="text-center text-gray-400">Zone de dépôt ou création à venir...</div>
+        <div className="p-4">
+          <h1 className="text-2xl font-bold mb-4">Prendre une photo</h1>
+          <CameraStudio />
+        </div>
       </main>
 
       <BottomNav />
