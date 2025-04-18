@@ -3,16 +3,16 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Nom de ton application',
-    short_name: 'Nom court',
-    description: 'Description de ton application',
+    name: 'Re_act: Parce que réparer, c’est agir.',
+    short_name: 'Re_act',
+    description: 'Ici on agit pour réparer (vos vetements comme la planete)!',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#000000',
     icons: [
       {
-        src: '/search.png',
+        src: '/image.png',
         sizes: '192x192',
         type: 'image/png',
       }
